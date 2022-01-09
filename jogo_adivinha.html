@@ -8,7 +8,7 @@
 
     function mostra(frase) {
 
-        document.write(frase);
+        alert(frase);
         pulaLinha();
     }
 
@@ -19,21 +19,24 @@
 
     var numeroPensado = sorteia(100);
     
-    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    var tentativas = 1;
 
-    if(chute == numeroPensado) {
+    while(tentativas <= 3) {
+            
+        var chute = parseInt(prompt("Pensei um número. Qual você acha que é?"));
 
-        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
-    } else {
+        if(chute == numeroPensado) {
 
-        if(chute > numeroPensado) {
-
-            mostra("Você errou! Seu chute é maior que o número pensado! Pois eu pensei no " + numeroPensado);
+            mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+            break;
 
         } else {
-            mostra("Você errou! Seu chute é menor que o número pensado! Pois eu pensei no " + numeroPensado);
+            mostra("Você errou!") ;
         }
 
-        
+        tentativas++;
+
     }
+    mostra("FIM");
+
 </script>
