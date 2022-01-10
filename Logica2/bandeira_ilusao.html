@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilusão de Ótica</title>
+</head>
+<body>
+    <h1>Ilusão de Ótica</h1>
+    <p>Olhe atentamente para a bandeira por 30 segundos e depois olhe rapidamente para um espaço claro (uma parede, um papel, etc.)<br> Você verá as cores da bandeira do Brasil.</p>
+    <canvas width="600" height="400"></canvas>
+
+    
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle='pink';
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle='blue';
+    pincel.beginPath();
+    pincel.moveTo(300, 50);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.beginPath();
+    pincel.moveTo(300, 350);
+    pincel.lineTo(50, 200);
+    pincel.lineTo(550, 200);
+    pincel.fill();
+
+    pincel.fillStyle='lightyellow';
+    pincel.beginPath();
+
+    pincel.arc(300, 200, 100, 0, 2*3.14);
+    pincel.fill();
+
+</script>
+    
+</body>
+</html>
