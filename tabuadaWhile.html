@@ -6,10 +6,16 @@
         document.write("<br>");
     }
 
-    function mostra(frase) {
+    function mostra(x) {
 
-        document.write(frase);
+        document.write(x);
         pulaLinha();
+    }
+
+    function calcularDoisNumeros(x,y) {
+        var x;
+        var y;
+        return (x + y);
     }
 
     var multiplicador = 0;
@@ -18,9 +24,12 @@
 
         // mostra(7 * multiplicador);
         multiplicador = multiplicador + 1;
+       
         mostra ("7 X " + multiplicador + " = " + (7 * multiplicador));
 
     }
 mostra ("FIM");
+
+calcularDoisNumeros(20, 60);
 
 </script>
